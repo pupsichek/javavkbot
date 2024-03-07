@@ -15,7 +15,7 @@ public class Bot {
         TransportClient transportClient = new HttpTransportClient();
         VkApiClient vk = new VkApiClient(transportClient);
         Random random = new Random();
-        GroupActor actor = new GroupActor(223994968,"vk1.a.d7rSn6cPugrGeVvMo2qbMaIzYaUpZuWFIaWtC5f_3khK5RW-AgLsTSxBOextzfQKQJklQ0FYri46AjmrQkgj4lPlbSutYWYp5sPp6iHnjTxRjDVlwhFS0iUnVl2uuKgdT6FWGF_4wi-rtAy-WR3mnAh92lVjC1MmGXFmC1m1vISOOh4EMc8GLgdyCZkvkadtTncCpgJtDvMsHzYOaWo-SA");
+        GroupActor actor = new GroupActor(ид группы,токен);
         Integer ts = vk.messages().getLongPollServer(actor).execute().getTs();
         while (true){
             MessagesGetLongPollHistoryQuery historyQuery = vk.messages().getLongPollHistory(actor).ts(ts);
